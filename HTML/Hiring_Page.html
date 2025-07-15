@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libyan Jobs</title>
+    <link rel="icon" type="image/svg+xml" href="../Logos/Icon.svg">
+    <link rel="stylesheet" href="../CSS/Hiring_Page.css">
+    <!-- TODO: Add Somar Sans font link here when available -->
+</head>
+
+<body>
+
+
+    <header class="main-header" id="header">
+        <nav class="navbar">
+            <div class="navbar-top-row">
+
+                <h2 id="site-header">LIBYAN-JOBS</h2>
+
+
+
+
+                <div class="user-info">
+                    <p id="user-name">أحمد</p>
+                    <img src="../Logos/User Logo.png" alt="User Logo" id="user-logo" />
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+
+        <div class="hero-content">
+            <img src="../Logos/Icon4.png" alt="Search Icon" id="Search-Icon" />
+            <div class="text-content">
+                <h1>ابحث عن وظيفتك معنا</h1>
+                <p>ابدأ رحلتك المهنية اليوم بالبحث الذكي عن الفرص المتاحة حولك.</p>
+            </div>
+        </div>
+
+        <div class="hero-icon">
+            <a href="Main_Page.html">
+                <img src="../Logos/Back_Arrow.png" alt="Go to next page" style="cursor: pointer;"
+                    id="Back_Arrow" />
+            </a>
+        </div>
+
+    </section>
+
+
+    <main class="main-content">
+        <!-- Filter Sidebar will be rendered by JS -->
+        <aside class="filter-sidebar" id="filterSidebar"></aside>
+        <!-- Jobs List -->
+        <section class="jobs-section">
+            <div class="jobs-header">
+                <span class="jobs-count">3177 Jobs</span>
+            </div>
+            <div class="jobs-list">
+                <!-- Job Card 1 -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <a href="MojtabaGallary_Page.html" class="job-user-link">
+                            <div class="job-user">
+                                <span class="user-img">
+                                    <img src="../Logos/Mojtaba_Photo.png" alt="مجتبى سالم" />
+                                </span>
+                                <span class="user-name">مجتبى سالم</span>
+                            </div>
+                        </a>
+
+                        <span class="job-title">جرافيك ديزاينر</span>
+                    </div>
+                    <div class="job-card-details">
+                        <span class="job-salary">السعر: 2000 - 1500</span>
+                        <span class="job-date">وقت التسليم: يوم</span>
+                        <span class="job-location">الموقع: طرابلس</span>
+                        <span class="job-type">دوام</span>
+                    </div>
+                    <div class="job-card-desc">
+                        أنا مجتبى، مصمم جرافيك بخبرة، أعمل على خلق تصاميم إبداعية تلبي احتياجات العملاء. أعمل على كل ما
+                        يخص التصميم من البداية حتى النهاية. أرحب بالتحديات الجديدة وأسعى دائماً لتقديم أفضل النتائج.
+                    </div>
+                </div>
+                <!-- Job Card 2 -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <a href="MosabGallary_Page.html" class="job-user-link"></a>
+                        <div class="job-user">
+                            <span class="user-img"><img src="../Logos/Mosab_Photo.png" alt="مصعب الككلي" /></span>
+                            <span class="user-name">مصعب الككلي</span>
+                        </div>
+                        </a>
+                        <span class="job-title">مصور / منتج</span>
+                    </div>
+                    <div class="job-card-details">
+                        <span class="job-salary">السعر: 4000 - 1500</span>
+                        <span class="job-date">وقت التسليم: يوم</span>
+                        <span class="job-location">الموقع: طرابلس</span>
+                        <span class="job-type">فريلانسر</span>
+                    </div>
+                    <div class="job-card-desc">
+                        مرحباً، أنا مصعب، مصور ومنتج فيديوهات. أعمل على إنتاج محتوى احترافي للشركات والأفراد. أؤمن بأن
+                        العمل الجماعي أساس النجاح.
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pagination" id="pagination"></div>
+        </section>
+    </main>
+    <script src="../JavaScript/Hiring_Page.js"></script>
+</body>
+
+</html>

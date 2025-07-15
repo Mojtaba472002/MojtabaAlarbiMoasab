@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Libyan Jobs</title>
+    <link rel="icon" type="image/svg+xml" href="/My Code/Logos/Icon.svg">
+    <link rel="stylesheet" href="/My Code/CSS/MosabGallary_Page.css">
+</head>
+<body>
+    <header class="main-header" id="header">
+        <nav class="navbar">
+            <div class="navbar-top-row">
+
+                <h2 id="site-header">LIBYAN-JOBS</h2>
+
+
+                <div class="user-info">
+                    <p id="user-name">أحمد</p>
+                    <img src="/My Code/Logos/User Logo.png" alt="User Logo" id="user-logo" />
+                </div>
+
+
+            </div>
+        </nav>
+
+    </header>
+    <div class="main-content">
+        <div class="profile-section">
+            <img src="/My Code/Logos/Mosab/ane.jpg" alt="مصعب الككلي" class="profile-img">
+            <div class="profile-name">مصعب الككلي</div>
+            <div class="profile-job">مصوّر / منتج</div>
+            <div class="profile-info">الخبرة : 3 سنوات</div>
+            <div class="profile-info">الموقع : طرابلس</div>
+            <div class="profile-info">رقم الهاتف: 0911104948</div>
+            <button class="reserve-btn">احجز الآن</button>
+        </div>
+        <div class="gallery-section">
+            <button class="back-btn">&#8592;</button>
+            <div class="gallery-grid">
+                <div class="gallery-item img1">
+                    <img src="/My Code/Logos/Mosab/mos photos/photo_1_2025-07-11_20-17-01.jpg" alt="صورة 1">
+                    <div class="caption">صورة 1</div>
+                </div>
+                <div class="gallery-item img2">
+                    <img src="/My Code/Logos/Mosab/mos photos/photo_2_2025-07-11_20-17-01.jpg" alt="صورة 2">
+                    <div class="caption">صورة 2</div>
+                </div>
+                <div class="gallery-item img3">
+                    <img src="/My Code/Logos/Mosab/mos photos/photo_3_2025-07-11_20-17-01.jpg" alt="صورة 3">
+                    <div class="caption">صورة 3</div>
+                </div>
+                <div class="gallery-item vid1">
+                    <video src="/My Code/Logos/Mosab/-yWJBEhNSs4.mp4" controls class="gallery-video"></video>
+                    <div class="caption">فيديو 1</div>
+                </div>
+                <div class="gallery-item vid2">
+                    <video src="/My Code/Logos/Mosab/IMG_3431.MP4" controls class="gallery-video"></video>
+                    <div class="caption">فيديو 2</div>
+                </div>
+                <div class="gallery-item vid3">
+                    <video src="/My Code/Logos/Mosab/IMG_3437.MP4" controls class="gallery-video"></video>
+                    <div class="caption">فيديو 3</div>
+                </div>
+            </div>
+            <div class="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">4</button>
+                <button class="page-btn">5</button>
+            </div>
+        </div>
+    </div>
+    <!-- Modal for fullscreen image view -->
+    <div class="modal-overlay hidden" id="imgModal">
+        <img class="modal-img" id="modalImg" src="" alt="صورة مكبرة">
+    </div>
+    <!-- Modal for fullscreen video view -->
+    <div class="modal-overlay hidden" id="videoModal">
+        <video class="modal-video" id="modalVideo" src="" controls autoplay style="max-width:90vw;max-height:90vh;border-radius:16px;box-shadow:0 8px 32px #000a;background:#000;"></video>
+    </div>
+    <!-- Reservation Modal -->
+    <div class="modal-overlay hidden" id="reserveModal">
+        <form class="reserve-modal-box" id="reserveForm" onsubmit="return false;">
+            <label for="serviceType" class="reserve-label">نوع الخدمة</label>
+            <input type="text" id="serviceType" class="reserve-input" placeholder="ادخل نوع الخدمة">
+            <label for="budget" class="reserve-label">الميزانية</label>
+            <input type="text" id="budget" class="reserve-input" placeholder="ادخل الميزانية">
+            <div class="reserve-btns">
+                <button type="submit" class="reserve-ok">موافق</button>
+                <button type="button" class="reserve-cancel">الغاء</button>
+            </div>
+        </form>
+    </div>
+    <script src="/My Code/JavaScript/MosabGallary_Page.js"></script>
+</body>
+</html>

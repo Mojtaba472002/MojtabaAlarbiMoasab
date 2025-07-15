@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Libyan Jobs</title>
+    <link rel="icon" type="image/svg+xml" href="/My Code/Logos/Icon.svg">
+    <link rel="stylesheet" href="/My Code/CSS/MojtabaGallary_Page.css">
+</head>
+<body>
+    <header class="main-header" id="header">
+        <nav class="navbar">
+            <div class="navbar-top-row">
+
+                <h2 id="site-header">LIBYAN-JOBS</h2>
+
+
+                <div class="user-info">
+                    <p id="user-name">أحمد</p>
+                    <img src="/My Code/Logos/User Logo.png" alt="User Logo" id="user-logo" />
+                </div>
+
+
+            </div>
+        </nav>
+
+    </header>
+    <div class="main-content">
+        <div class="profile-section">
+            <img src="/My Code/Logos/Mojtaba/Mojtaba Ahmed1.png" alt="profile" class="profile-img">
+            <div class="profile-name">مجتبي سالم</div>
+            <div class="profile-job">جرافيك ديزاينر</div>
+            <div class="profile-info">الخبرة : 3 سنوات</div>
+            <div class="profile-info">الموقع : طرابلس</div>
+            <div class="profile-info">رقم الهاتف: 0910116794</div>
+            <button class="reserve-btn">احجز الآن</button>
+        </div>
+        <div class="gallery-section">
+            <button class="back-btn">&#8592;</button>
+            <div class="gallery-grid">
+                <div class="gallery-item img1" onclick="openWeatherModal(0)"><img src="/My Code/Logos/Mojtaba/photo_2025-06-02_02-26-15.jpg" alt="شن الجو"><div class="caption">شن الجو</div></div>
+                <div class="gallery-item img2" onclick="openBlueModal(0)"><img src="/My Code/Logos/Mojtaba/3232فرصتك في التخصصات الرائدة.jpg" alt="فرصتك في التخصصات الرائدة"><div class="caption">فرصتك في التخصصات الرائدة</div></div>
+                <div class="gallery-item img3" onclick="openGreenModal(0)"><img src="/My Code/Logos/Mojtaba/Artboard 1.png" alt="STADIO"><div class="caption">STADIO</div></div>
+                <div class="gallery-item img4" onclick="openOrangeModal(0)"><img src="/My Code/Logos/Mojtaba/Artboard 1.jpg" alt="SOCIAL MEDIA DESIGN EVO"><div class="caption">SOCIAL MEDIA DESIGN EVO</div></div>
+                <div class="gallery-item img5" onclick="openRedModal(0)"><img src="/My Code/Logos/Mojtaba/Artboard 4-1.png" alt="SOCIAL MEDIA DESIGN MATREX"><div class="caption">SOCIAL MEDIA DESIGN MATREX</div></div>
+                <div class="gallery-item img6" onclick="openModal(0)"><img src="/My Code/Logos/Mojtaba/photo_2025-06-02_02-26-22.jpg" alt="تبي تمشي للبحر، ولا تفضل الجبل؟"><div class="caption">تبي تمشي للبحر، ولا تفضل الجبل؟</div></div>
+            </div>
+            <div class="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">4</button>
+                <button class="page-btn">5</button>
+            </div>
+        </div>
+    </div>
+    <div id="modal-overlay" class="modal-overlay" style="display:none;">
+      <div class="modal-content">
+        <span class="modal-arrow modal-arrow-right" onclick="nextModalImage()">&#8592;</span>
+        <span class="modal-arrow modal-arrow-left" onclick="prevModalImage()">&#8594;</span>
+        <div class="modal-gallery">
+          <img id="modal-img" src="/My Code/Logos/Mojtaba/بحر/photo_2025-06-02_02-26-33.jpg" alt="صورة 1">
+          <div id="modal-caption" class="modal-caption">صورة 1</div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-overlay-red" class="modal-overlay" style="display:none;">
+      <div class="modal-content">
+        <span class="modal-arrow modal-arrow-right" onclick="nextRedModalImage()">&#8592;</span>
+        <span class="modal-arrow modal-arrow-left" onclick="prevRedModalImage()">&#8594;</span>
+        <div class="modal-gallery">
+          <img id="modal-img-red" src="/My Code/Logos/Mojtaba/الاحمر/Artboard 1 (2).jpg" alt="صورة 1">
+        </div>
+      </div>
+    </div>
+    <div id="modal-overlay-matrex" class="modal-overlay" style="display:none;">
+      <div class="modal-content">
+        <span class="modal-arrow modal-arrow-right" onclick="nextMatrexModalImage()">&#8592;</span>
+        <span class="modal-arrow modal-arrow-left" onclick="prevMatrexModalImage()">&#8594;</span>
+        <div class="modal-gallery">
+          <img id="modal-img-matrex" src="/My Code/Logos/Mojtaba/الاحمر/Artboard 4-1.png" alt="SOCIAL MEDIA DESIGN MATREX">
+        </div>
+      </div>
+    </div>
+    <div id="modal-overlay-orange" class="modal-overlay" style="display:none;">
+      <div class="modal-content">
+        <span class="modal-arrow modal-arrow-right" onclick="nextOrangeModalImage()">&#8592;</span>
+        <span class="modal-arrow modal-arrow-left" onclick="prevOrangeModalImage()">&#8594;</span>
+        <div class="modal-gallery">
+          <img id="modal-img-orange" src="/My Code/Logos/Mojtaba/برتقالية/EVO_للتوصيل_و_الشحن_السريع_تخزين_ب_2_دينار.jpg" alt="برتقالية 1">
+        </div>
+      </div>
+    </div>
+    <div id="modal-overlay-green" class="modal-overlay" style="display:none;">
+      <div class="modal-content">
+        <span class="modal-arrow modal-arrow-right" onclick="nextGreenModalImage()">&#8592;</span>
+        <span class="modal-arrow modal-arrow-left" onclick="prevGreenModalImage()">&#8594;</span>
+        <div class="modal-gallery">
+          <img id="modal-img-green" src="/My Code/Logos/Mojtaba/الاخضر/Artboard 2.png" alt="اخضر 1">
+        </div>
+      </div>
+    </div>
+    <div id="modal-overlay-blue" class="modal-overlay" style="display:none;">
+      <div class="modal-content">
+        <span class="modal-arrow modal-arrow-right" onclick="nextBlueModalImage()">&#8592;</span>
+        <span class="modal-arrow modal-arrow-left" onclick="prevBlueModalImage()">&#8594;</span>
+        <div class="modal-gallery">
+          <img id="modal-img-blue" src="/My Code/Logos/Mojtaba/الازرق/ابني مستقبلك.jpg" alt="ازرق 1">
+        </div>
+      </div>
+    </div>
+    <div id="modal-overlay-weather" class="modal-overlay" style="display:none;">
+      <div class="modal-content">
+        <span class="modal-arrow modal-arrow-right" onclick="nextWeatherModalImage()">&#8592;</span>
+        <span class="modal-arrow modal-arrow-left" onclick="prevWeatherModalImage()">&#8594;</span>
+        <div class="modal-gallery">
+          <img id="modal-img-weather" src="/My Code/Logos/Mojtaba/الجو/photo_2025-06-02_02-26-33.jpg" alt="جو 1">
+        </div>
+      </div>
+    </div>
+    <!-- Reservation Modal -->
+    <div class="modal-overlay hidden" id="reserveModal">
+        <form class="reserve-modal-box" id="reserveForm" onsubmit="return false;">
+            <label for="serviceType" class="reserve-label">نوع الخدمة</label>
+            <input type="text" id="serviceType" class="reserve-input" placeholder="ادخل نوع الخدمة">
+            <label for="budget" class="reserve-label">الميزانية</label>
+            <input type="text" id="budget" class="reserve-input" placeholder="ادخل الميزانية">
+            <div class="reserve-btns">
+                <button type="submit" class="reserve-ok">موافق</button>
+                <button type="button" class="reserve-cancel">الغاء</button>
+            </div>
+        </form>
+    </div>
+    <script src="/My Code/JavaScript/MojtabaGallary_Page.js"></script>
+</body>
+</html>

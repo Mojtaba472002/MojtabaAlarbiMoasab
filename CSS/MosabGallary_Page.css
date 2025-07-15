@@ -1,0 +1,648 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, * {
+    font-family: 'Cairo', Arial, sans-serif !important;
+}
+
+body {
+    background: #f4f8fb;
+    min-height: 100vh;
+}
+
+.main-header {
+    background-color: #6CB649;
+    padding: 25px 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Desktop layout: three columns with nav menu in center */
+.navbar-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Site logo/title */
+#site-header {
+    color: white;
+    font-size: 38;
+    font-weight: 800;
+    margin: 0;
+    flex: -1;
+    text-align: left;
+}
+
+/* User info section */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: -1;
+    justify-content: flex-end;
+}
+
+#user-name {
+    color: white;
+    font-weight: 600;
+    margin: 0;
+}
+
+#user-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid rgb(253, 253, 253);
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 32px 40px;
+    gap: 32px;
+}
+
+.gallery-section {
+    flex: 3;
+    background: #fff;
+    border-radius: 18px;
+    padding: 32px 24px 24px 24px;
+    box-shadow: 0 2px 8px #2196f322;
+    position: relative;
+}
+
+.back-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: #fff;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #39b54a;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 2px 8px #2196f322;
+    transition: background 0.2s;
+}
+
+.back-btn:hover {
+    background: #e6f9ea;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+/* Gallery hover overlays and caption styles to match Style_Gallery.css (green theme) */
+.gallery-item {
+    background: #f7f7f7;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px #0001;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.gallery-item:hover {
+    box-shadow: 0 8px 24px #39b54a33, 0 1.5px 8px #0002;
+    transform: translateY(-8px) scale(1.03);
+    z-index: 2;
+}
+
+/* Remove overlay on hover for gallery cards */
+.gallery-item::after,
+.gallery-item.img1::after,
+.gallery-item.img2::after,
+.gallery-item.img3::after {
+    background: none !important;
+    opacity: 0 !important;
+}
+
+.gallery-item:hover::after {
+    opacity: 0 !important;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+    filter: blur(0.3px) brightness(0.85);
+}
+
+.gallery-item .caption {
+    font-family: 'Somar Sans', Arial, sans-serif !important;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0 12px 18px 12px;
+    opacity: 0;
+    z-index: 2;
+    text-align: center;
+    font-weight: bold;
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+    text-shadow: 0 2px 8px #0008;
+}
+
+.gallery-item:hover .caption {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.05);
+}
+
+.caption {
+    padding: 12px;
+    font-size: 1.1rem;
+    color: #333;
+    text-align: center;
+    background: #fff;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.page-btn {
+    background: #fff;
+    border: 1px solid #39b54a;
+    color: #39b54a;
+    border-radius: 6px;
+    padding: 6px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.page-btn.active, .page-btn:hover {
+    background: #39b54a;
+    color: #fff;
+}
+
+.profile-section {
+    flex: 1;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px #2196f322;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 260px;
+    max-width: 320px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 18px;
+    border: 4px solid #e6f9ea;
+}
+
+.profile-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.profile-job {
+    font-size: 1.1rem;
+    color: #39b54a;
+    margin-bottom: 12px;
+}
+
+.profile-info {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.reserve-btn {
+    margin-top: 24px;
+    background: #39b54a;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 0;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.reserve-btn:hover {
+    background: #2e9440;
+}
+
+.gallery-video {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.gallery-item.img1::after { background: transparent; }
+.gallery-item.img2::after { background: transparent; }
+.gallery-item.img3::after { background: transparent; } 
+
+/* Modal styles for fullscreen image view */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+.modal-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px #000a;
+    background: #fff;
+    object-fit: contain;
+}
+
+.modal-overlay.hidden {
+    display: none;
+} 
+
+.modal-overlay#reserveModal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reserve-modal-box {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #0002;
+    padding: 32px 28px 24px 28px;
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    gap: 18px;
+}
+
+.reserve-label {
+    font-size: 1.1rem;
+    color: #222;
+    margin-bottom: 4px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.reserve-input {
+    font-size: 1rem;
+    padding: 10px 12px;
+    border: 1.5px solid #39b54a;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 8px;
+    transition: border 0.2s;
+    direction: rtl;
+}
+
+.reserve-input:focus {
+    border: 1.5px solid #2e9440;
+    background: #e6f9ea;
+} 
+
+.reserve-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: flex-end;
+    margin-top: 18px;
+}
+
+.reserve-ok {
+    background: #39b54a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.reserve-ok:hover {
+    background: #2e9440;
+}
+
+.reserve-cancel {
+    background: #eee;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 22px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.reserve-cancel:hover {
+    background: #ccc;
+} 
+
+.hidden {
+    display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .main-content {
+        margin: 20px;
+        gap: 20px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .main-content {
+        margin: 15px;
+        gap: 15px;
+    }
+    
+    .gallery-section {
+        padding: 25px 20px 20px 20px;
+    }
+    
+    .profile-section {
+        padding: 25px 20px;
+        min-width: 240px;
+    }
+    
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .profile-name {
+        font-size: 1.2rem;
+    }
+    
+    .profile-job {
+        font-size: 1rem;
+    }
+    
+    .profile-info {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        padding: 20px 20px;
+    }
+    
+    .navbar-top-row {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    #site-header {
+        font-size: 32px;
+        text-align: center;
+        flex: none;
+    }
+    
+    .user-info {
+        justify-content: center;
+        flex: none;
+    }
+    
+    .main-content {
+        flex-direction: column;
+        margin: 15px;
+        gap: 20px;
+    }
+    
+    .profile-section {
+        order: 1;
+        max-width: 400px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .gallery-section {
+        order: 2;
+        flex: none;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .gallery-item img,
+    .gallery-video {
+        height: 180px;
+    }
+    
+    .back-btn {
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-header {
+        padding: 15px 15px;
+    }
+    
+    .navbar {
+        padding: 0 10px;
+    }
+    
+    #site-header {
+        font-size: 28px;
+    }
+    
+    .main-content {
+        margin: 10px;
+        gap: 15px;
+    }
+    
+    .gallery-section {
+        padding: 20px 15px 15px 15px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .gallery-item img,
+    .gallery-video {
+        height: 200px;
+    }
+    
+    .profile-section {
+        padding: 25px 20px;
+    }
+    
+    .profile-img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .profile-name {
+        font-size: 1.1rem;
+    }
+    
+    .profile-job {
+        font-size: 0.9rem;
+    }
+    
+    .profile-info {
+        font-size: 0.8rem;
+    }
+    
+    .reserve-btn {
+        padding: 12px 0;
+        font-size: 1rem;
+    }
+    
+    .pagination {
+        gap: 5px;
+    }
+    
+    .page-btn {
+        padding: 5px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .reserve-modal-box {
+        padding: 25px 20px;
+        min-width: 280px;
+        max-width: 90vw;
+    }
+    
+    .reserve-btns {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .reserve-ok, .reserve-cancel {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .main-content {
+        margin: 8px;
+        gap: 12px;
+    }
+    
+    .gallery-section {
+        padding: 15px 12px 12px 12px;
+    }
+    
+    .gallery-grid {
+        gap: 12px;
+    }
+    
+    .gallery-item img,
+    .gallery-video {
+        height: 180px;
+    }
+    
+    .profile-section {
+        padding: 20px 15px;
+    }
+    
+    .profile-img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .profile-name {
+        font-size: 1rem;
+    }
+    
+    .profile-job {
+        font-size: 0.85rem;
+    }
+    
+    .profile-info {
+        font-size: 0.75rem;
+    }
+    
+    .reserve-btn {
+        padding: 10px 0;
+        font-size: 0.9rem;
+    }
+    
+    .page-btn {
+        padding: 4px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Modal responsive adjustments */
+@media (max-width: 800px) {
+    .modal-img,
+    .modal-video {
+        max-width: 100vw;
+        max-height: 100vh;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+} 

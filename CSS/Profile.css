@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Somar+Sans:wght@400;700&display=swap');
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Somar Sans', Arial, sans-serif !important;
+    background: #f7f7f7;
+    min-height: 100vh;
+}
+
+/* Navbar (copied from Employee.css/Main_Page.css) */
+.main-header {
+    background-color: #6CB649;
+    padding: 25px 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.navbar-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+#site-header {
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+    margin: 0;
+    flex: -1;
+    text-align: left;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+#site-header:hover {
+    color: #eaffea;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: -1;
+    justify-content: flex-end;
+}
+#user-name {
+    color: white;
+    font-weight: 600;
+    margin: 0;
+}
+#user-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+#sign-out {
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    transition: color 0.2s ease-in-out;
+}
+#sign-out::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: width 0.4s ease;
+    pointer-events: none;
+}
+#sign-out:hover::after {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+#sign-out:focus::after,
+#sign-out:active::after {
+    width: 0;
+}
+
+/* Profile Main Layout */
+.profile-main {
+    max-width: 700px;
+    margin: 40px auto 0 auto;
+    padding: 0 16px 40px 16px;
+}
+.profile-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(67,176,42,0.08), 0 1.5px 6px rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 32px 32px 24px 32px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+}
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #eaffea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 2px 8px #6CB64922;
+}
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.profile-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+.profile-name {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 4px;
+}
+.profile-title {
+    font-size: 1.2rem;
+    color: #43B02A;
+    font-weight: 600;
+}
+
+/* Appointments Section */
+.appointments-section {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px #6CB64911;
+    padding: 28px 24px 24px 24px;
+}
+.appointments-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #43B02A;
+    margin-bottom: 24px;
+    text-align: right;
+}
+.appointments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.appointment {
+    background: #f7f7f7;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px #0001;
+    padding: 18px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 32px;
+    align-items: flex-start;
+    font-size: 1rem;
+}
+.appointment-row {
+    min-width: 180px;
+    margin-bottom: 2px;
+    color: #333;
+    font-weight: 500;
+}
+.appointment-row span {
+    color: #43B02A;
+    font-weight: 700;
+    margin-left: 6px;
+}
+.appointment-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+}
+.approve-btn, .cancel-btn {
+    padding: 8px 22px;
+    border-radius: 8px !important;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px #0001;
+    outline: none;
+    font-family: 'Somar Sans', Arial, sans-serif !important;
+    margin: 0;
+    display: inline-block;
+}
+.approve-btn {
+    background: #43B02A;
+    color: #fff;
+}
+.approve-btn:hover {
+    background: #2e9440;
+}
+.cancel-btn {
+    background: #eee;
+    color: #d32f2f;
+}
+.cancel-btn:hover {
+    background: #fbeaea;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .profile-main {
+        max-width: 98vw;
+        padding: 0 4vw 40px 4vw;
+    }
+    .profile-card {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 24px 10px 18px 10px;
+    }
+    .profile-details {
+        align-items: center;
+        text-align: center;
+    }
+}
+@media (max-width: 600px) {
+    .main-header {
+        padding: 15px 5px;
+    }
+    .navbar {
+        padding: 0 5px;
+    }
+    #site-header {
+        font-size: 22px;
+    }
+    .profile-main {
+        padding: 0 2vw 30px 2vw;
+    }
+    .appointments-section {
+        padding: 16px 6px 12px 6px;
+    }
+    .appointment {
+        padding: 12px 8px;
+        font-size: 0.95rem;
+        gap: 10px 12px;
+    }
+    .appointment-row {
+        min-width: 120px;
+    }
+    .appointment-actions {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+    .approve-btn, .cancel-btn {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 0.98rem;
+    }
+} 

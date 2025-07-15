@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libyan Jobs</title>
+    <link rel="icon" type="image/svg+xml" href="/My Code/Logos/Icon.svg">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../CSS/ChooseRole_Page.css" />
+</head>
+
+<body>
+    <div class="container">
+
+        <aside class="left-panel" aria-label="مقدمة">
+            <header>
+                <h1 class="welcome">Welcome</h1>
+                <p class="subtitle">First Libyan<br>Jobs Website</p>
+            </header>
+        </aside>
+
+        <main class="right-panel">
+            <section class="logo-placeholder" aria-hidden="true">
+                <img src="/My Code/Logos/Login_Headline.png" alt="Logo">
+            </section>
+
+            <h2 class="choose-title">اختر طريقة التسجيل</h2>
+
+            <form class="choose-options" role="radiogroup" aria-labelledby="role-legend">
+                <fieldset>
+
+                    <!-- Employee Option -->
+                    <div class="option-card" data-role="employee" tabindex="0" role="radio" aria-checked="false">
+                        <input type="radio" name="role" value="employee" hidden />
+                        <img src="/My Code/Logos/Employee.png" alt="موظف" class="option-icon" />
+                        <span class="option-label">موظف</span>
+                    </div>
+
+                    <div class="or-separator" aria-hidden="true">أو</div>
+
+                    <!-- Client Option -->
+                    <div class="option-card" data-role="client" tabindex="0" role="radio" aria-checked="false">
+                        <input type="radio" name="role" value="client" hidden />
+                        <img src="/My Code/Logos/Client.png" alt="عميل" class="option-icon" />
+                        <span class="option-label">عميل</span>
+                    </div>
+
+                </fieldset>
+
+
+            </form>
+
+            <button type="button" class="continue-btn" id="continue-btn">الاستمرار</button>
+
+
+            <p id="choose-warning" class="warning-msg" role="alert" aria-live="polite" style="display: none;">
+                يرجى اختيار نوع الحساب للمتابعة
+            </p>
+        </main>
+
+    </div>
+
+    <script src="/My Code/JavaScript/ChooseRole_Page.js"></script>
+</body>
+
+</html>
